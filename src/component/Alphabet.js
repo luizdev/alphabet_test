@@ -2,11 +2,13 @@ import './Alphabet.css';
 import React, { useState } from "react";
 
 const Alphabet = () => {
+
   const [text, setText] = useState('');
   let [totalSum, setTotalSum] = useState();
 
   const handleChange = (e) => {
-    setText(e.target.value);
+    const value = e.target.value.toUpperCase().trim().replace(/[^A-Za-z]/ig, '');
+    setText(value);
   }
 
   const handleClick = () => {
@@ -40,7 +42,7 @@ const Alphabet = () => {
   return (
     <div className="container">
       <div className="content-form">
-        <input type="text" placeholder="Ingresar Texto" onChange={handleChange}/>
+        <input value={text} type="text" placeholder="Ingresar Texto" onChange={handleChange}/>
         <input 
           type="button" 
           value="Evaluar"
