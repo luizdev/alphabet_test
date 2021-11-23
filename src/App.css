@@ -37,21 +37,4 @@
   }
 }
 
-.content-form{
-  display: flex;  
-}
 
-.content-form input[type="text"] {
-  margin-right: 1em;
-  padding: 0.5em;
-  font-size: 18px;
-}
-
-.content-form input[type="button"] {
-  background: #21c387;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 0.5em 1em;
-  font-size: 18px;
-}
